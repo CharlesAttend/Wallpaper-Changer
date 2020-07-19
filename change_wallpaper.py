@@ -6,10 +6,13 @@ from datetime import datetime
 from pathlib import Path
 import os, ctypes
 
+##############################################
 saveImg = False #True to save all image
-client_id = ""
-client_secret = ""
+#Write your keys here ! 
+access_key = ""
+secret_key = ""
 redirect_uri = ""
+##############################################
 
 def download(url, file_name):
     # open in binary mode
@@ -26,7 +29,7 @@ def change_wallpaper(img_name):
     print("Wallpapper set !")
 
 def get_img():
-    auth = Auth(client_id, client_secret, redirect_uri)
+    auth = Auth(access_key, secret_key, redirect_uri)
     api = Api(auth)
     photo = api.photo.random(query="Wallpaper", orientation="landscape")[0]
 
