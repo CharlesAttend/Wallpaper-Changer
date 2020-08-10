@@ -10,6 +10,8 @@ Small python script to download a image from Unsplash and set it as windows wall
 ### Automaticly execute the script 
 On linux you can use crontab !
 On windows use the task scheduler !
+You can download [my windows task file](/Wallpaper_Changer.xml) for quick add or create it manually:
+
 Create a task and fill it like this :
 ![tuto1](/tuto1.png)
 Trigger it when you want, don't forget to check `Run task as soon as possible after a scheduled start is missed` in the setting tab. 
