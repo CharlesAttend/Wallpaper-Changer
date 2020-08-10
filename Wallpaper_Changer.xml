@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-16"?>
+<Task version="1.4" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+  <RegistrationInfo>
+    <Date>2020-06-29T13:41:00.3242395</Date>
+    <Author>SPECTRE-CHARLES\charl</Author>
+    <Description>Change wallpaper every day</Description>
+    <URI>\MyTask\Wallpaper Changer</URI>
+  </RegistrationInfo>
+  <Triggers>
+    <CalendarTrigger>
+      <StartBoundary>2020-06-29T08:30:00</StartBoundary>
+      <Enabled>true</Enabled>
+      <ScheduleByDay>
+        <DaysInterval>1</DaysInterval>
+      </ScheduleByDay>
+    </CalendarTrigger>
+  </Triggers>
+  <Principals>
+    <Principal id="Author">
+      <UserId>S-1-5-21-2334361407-3232670287-2528828076-1001</UserId>
+      <LogonType>InteractiveToken</LogonType>
+      <RunLevel>LeastPrivilege</RunLevel>
+    </Principal>
+  </Principals>
+  <Settings>
+    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
+    <StopIfGoingOnBatteries>true</StopIfGoingOnBatteries>
+    <AllowHardTerminate>true</AllowHardTerminate>
+    <StartWhenAvailable>true</StartWhenAvailable>
+    <RunOnlyIfNetworkAvailable>true</RunOnlyIfNetworkAvailable>
+    <IdleSettings>
+      <StopOnIdleEnd>true</StopOnIdleEnd>
+      <RestartOnIdle>false</RestartOnIdle>
+    </IdleSettings>
+    <AllowStartOnDemand>true</AllowStartOnDemand>
+    <Enabled>true</Enabled>
+    <Hidden>false</Hidden>
+    <RunOnlyIfIdle>false</RunOnlyIfIdle>
+    <DisallowStartOnRemoteAppSession>false</DisallowStartOnRemoteAppSession>
+    <UseUnifiedSchedulingEngine>true</UseUnifiedSchedulingEngine>
+    <WakeToRun>false</WakeToRun>
+    <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>
+    <Priority>7</Priority>
+  </Settings>
+  <Actions Context="Author">
+    <Exec>
+      <Command>C:\Users\charl\AppData\Local\Programs\Python\Python38-32\python.exe</Command>
+      <Arguments>C:\Users\charl\OneDrive\WallPapperChanger\change_wallpaper.py</Arguments>
+      <WorkingDirectory>C:\Users\charl\OneDrive\WallPapperChanger\</WorkingDirectory>
+    </Exec>
+  </Actions>
+</Task>
